@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 urlpatterns = [
-    path('dropin/', include('dropinApp.urls')),
-    path('login/', include('dropinApp.urls')),
+    path('dropin/', include('main.urls')),
+    path('leagues/', include('leagues.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
 
