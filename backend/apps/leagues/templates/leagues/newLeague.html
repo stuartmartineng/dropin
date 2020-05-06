@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <form method="post" action="{% url 'leagues:createLeague' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="leagueName">League Name</label>
+                    <input class="form-control" name="leagueName" id="leagueName" aria-describedby="Name of Your League">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-sm">Create</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
