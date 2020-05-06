@@ -1,5 +1,5 @@
 # Dropin League Management
-The Goal of this app is to make managing recreational sports leagues easy.  Whether you are just trying to pick teams for your pickup Volleyball game or you are organizing teams for massive leagues.
+The Goal of this app is to make managing recreational sports leagues easy.  Dropin was design for the common person trying to organized fair teams from small to large groups of people.
 
 ## Inspiration
 Dropin started at my university dropin volleyball session.  We were having trouble picking teams that would make competitive games without hurting anyones feelings.  The idea of dropin is to have users vote anonymously on skill levels of each player and have software decide team without revealing the ranking to the players.
