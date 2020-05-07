@@ -10,8 +10,8 @@ class LeaguesTable extends React.Component{
     render() {
         return (
             <div>
-                <table className="table">
-                    <thead>
+                <table className="table table-striped">
+                    <thead className="">
                         <th>League Name</th>                    
                         <th>Owner</th>
                     </thead>

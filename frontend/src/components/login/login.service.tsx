@@ -18,8 +18,7 @@ function login(data: any){
     .then(json => {
         console.log("Json: ", json);
         if(json.non_field_errors != null){
-            if(json.non_field_errors[0] == "Unable to log in with provided credentials."){
-                const error = json.non_field_errors[0];
+            if(json.non_field_errors[0] === "Unable to log in with provided credentials."){
                 return Promise.reject("User Credentials did not match with records.");
             }
         }

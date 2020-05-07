@@ -1,20 +1,16 @@
 import React from 'react';
 
 class TeamsTable extends React.Component{
-    constructor(props: any){
-        super(props);
-        this.state = {
-
-        }
-    }
     render() {
         return (
             <div>
-                <table className="table">
-                    <thead>
-                        <th>Team Name</th>                    
-                        <th>Owner</th>
-                        <th>Players</th>
+                <table className="table table-striped">
+                    <thead className="thead-dark">
+                        <tr>
+                            <th>Team Name</th>                    
+                            <th>Owner</th>
+                            <th>Players</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>

@@ -1,6 +1,5 @@
 import React from 'react';
 import LeaguesTable from './leaguesTable';
-import {Navbar} from './navbar';
 
 class Home extends React.Component{
     constructor(props: any){

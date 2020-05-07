@@ -2,7 +2,6 @@ import React from 'react';
 import Home from './components/home/home'
 
 import { Router, Route } from 'react-router-dom';
-import { connect } from 'react-redux';
 import {Login} from './components/login/login'
 
 import {history} from './helpers/history'
