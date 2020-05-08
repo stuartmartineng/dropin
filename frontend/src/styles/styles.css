@@ -10,3 +10,9 @@
 .bottom-padding{
     padding-bottom: 10px;
 }
+Nav.Item{
+    background-color: aliceblue
+}
+.noOverflowX{
+    overflow-x: hidden;
+}

@@ -1,0 +1,48 @@
+.slide-in-wrapper{
+    overflow: hidden;
+}
+
+.slide-in-appear{
+    position: relative;
+    left: -110%;
+}
+.slide-in-appear.slide-in-appear-active{
+    left:0px !important; /* Opera 10.50–12.00 */
+    position: relative;
+    transition: left 1s ease-in-out, position 1.5s ease-in-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.slide-in-exit{
+    left: 0px;
+}
+.slide-in-exit-active{
+    left:-520px !important; /* Opera 10.50–12.00 */
+    position: relative;
+    transition: left 500ms linear;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+    background-color: purple;
+}
+
+.my-node-enter {
+    opacity: 0;
+  }
+  .my-node-enter-active {
+    opacity: 1;
+    transition: opacity;
+    transition-duration: 1000ms
+  }
+  .my-node-exit {
+    opacity: 1;
+  }
+  .my-node-exit-active {
+    opacity: 0;
+    transition: opacity 1ms;
+  }
+
+  .example-appear {
+    opacity: 0.01;
+  }
+  
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }

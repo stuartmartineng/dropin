@@ -1,19 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Nav} from 'react-bootstrap'
+import {Nav, Navbar, Button} from 'react-bootstrap';
 
-class Navbar extends React.Component{
+class DropinNavbar extends React.Component{
     render() {
-        const { loggedIn }: any = this.props;
+        const { loggedIn, user }: any = this.props;
         //const { user }: any = this.props;
         console.log("Logged: ", loggedIn);
+
         return (
 
             <div>
-                {loggedIn && <Nav fill variant="tabs">
-                    <Nav.Item><Nav.Link href="#/">Dropin</Nav.Link></Nav.Item>
-                    <Nav.Item ><Nav.Link href="/login">Logout</Nav.Link></Nav.Item>
-                </Nav>
+                {loggedIn && 
+                    <Navbar bg="dark" variant="dark">
+                        <Navbar.Brand href="/">Dropin</Navbar.Brand>
+                        <Navbar.Collapse className="justify-content-end">
+                        <Nav.Item>
+                                <Navbar.Text>
+                                    <a>Signed in as: {user.user.first_name + ' ' + user.user.last_name + ' '}{'\u00A0'}</a>
+                                </Navbar.Text>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Button variant="outline-info" size="sm" href="/login">Logout</Button>
+                            </Nav.Item>
+                        </Navbar.Collapse>
+                    </Navbar>
             }
             </div>
         )
@@ -30,6 +41,6 @@ function mapStateToProps(state: any) {
     };
 }
 
-const ConnectedComponent = connect(mapStateToProps)(Navbar);
+const ConnectedComponent = connect(mapStateToProps)(DropinNavbar);
 
-export {ConnectedComponent as Navbar};
+export {ConnectedComponent as DropinNavbar};

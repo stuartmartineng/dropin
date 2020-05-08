@@ -1,5 +1,7 @@
 import React from 'react';
-import LeaguesTable from './leaguesTable';
+//import LeaguesTable from './leaguesTable';
+import AnimatedList from '../animatedComponents/list'
+import {Container, Row, Col} from 'react-bootstrap';
 
 class Home extends React.Component{
     constructor(props: any){
@@ -9,17 +11,35 @@ class Home extends React.Component{
         }
     }
     render() {
+        const leagues = [
+            {name: "League1"},
+            {name: "League2"},
+            {name: "League3"},
+            {name: "League4"}
+        ];
         return (
-            <div>
-                <div className='row'>
-                    <p>My Leagues</p>
+            <Container>
+                <div className="Home">
+                    <h1>Home</h1>
                 </div>
-                <div className='row'>
-                    <div className='col-xs-9'>
-                        <LeaguesTable></LeaguesTable>
-                    </div>
-                </div>
-            </div>
+                <Row>
+                    <Col>
+                        <h3>Leagues</h3>
+                    </Col>
+                    <Col>
+                        <h3>Teams</h3>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <AnimatedList items={leagues}/>
+                    </Col>
+                    <Col>
+                        <AnimatedList items={leagues}/>
+                    </Col>
+                </Row>
+                
+            </Container>
         )
     }
 }

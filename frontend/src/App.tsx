@@ -10,7 +10,8 @@ import {PrivateRoute} from './components/privateRoute/privateRoute'
 
 import './App.css';
 import './styles/styles.css';
-import {Navbar} from './components/home/navbar';
+import './styles/animations.css';
+import {DropinNavbar} from './components/home/navbar';
 
 import { Provider } from 'react-redux';
 import {store, persistor} from './store/store'
@@ -25,8 +26,7 @@ function App() {
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
 
-            <Navbar></Navbar>
-            <div className="container">
+            <DropinNavbar></DropinNavbar>
               <Router history={history}>
                 <div>
                     <PrivateRoute exact path="/" component={Home} />
@@ -34,7 +34,6 @@ function App() {
                     <Route path="/register" component={Register} />
                 </div>
               </Router>
-            </div>
           </PersistGate>
         </Provider>
     </div>
