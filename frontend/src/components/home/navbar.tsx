@@ -5,9 +5,7 @@ import {Nav, Navbar, Button} from 'react-bootstrap';
 class DropinNavbar extends React.Component{
     render() {
         const { loggedIn, user }: any = this.props;
-        //const { user }: any = this.props;
-        console.log("Logged: ", loggedIn);
-
+        
         return (
 
             <div>
@@ -17,7 +15,7 @@ class DropinNavbar extends React.Component{
                         <Navbar.Collapse className="justify-content-end">
                         <Nav.Item>
                                 <Navbar.Text>
-                                    <a>Signed in as: {user.user.first_name + ' ' + user.user.last_name + ' '}{'\u00A0'}</a>
+                                    <a>Signed in as: {user.first_name + ' ' + user.last_name + ' '}{'\u00A0'}</a>
                                 </Navbar.Text>
                             </Nav.Item>
                             <Nav.Item>

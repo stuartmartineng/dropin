@@ -18,7 +18,8 @@ function login(username: any, password: any) {
             .then(
                 user => { 
                     history.push('/');
-                    console.log("USER: " + user);                    
+                    Object.assign(user, user.user)
+                    user.user = null;                    
                     dispatch(success(user));
                 },
                 error => {
