@@ -16,3 +16,6 @@ Nav.Item{
 .noOverflowX{
     overflow-x: hidden;
 }
+.display-inline{
+    display: inline;
+}

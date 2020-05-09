@@ -1,7 +1,10 @@
 import React from 'react';
 //import LeaguesTable from './leaguesTable';
 import AnimatedList from '../animatedComponents/list'
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Card, Button, Accordion} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import {FaPlus} from 'react-icons/fa'
+
 
 class Home extends React.Component{
     constructor(props: any){
@@ -12,10 +15,10 @@ class Home extends React.Component{
     }
     render() {
         const leagues = [
-            {name: "League1"},
-            {name: "League2"},
-            {name: "League3"},
-            {name: "League4"}
+            {name: "League1", description: "This the description of the leagues.  It is a good description"},
+            {name: "League2", description: "This the description of the leagues.  It is a good description"},
+            {name: "League3", description: "This the description of the leagues.  It is a good description"},
+            {name: "League4", description: "This the description of the leagues.  It is a good description"},
         ];
         return (
             <Container>
@@ -24,7 +27,7 @@ class Home extends React.Component{
                 </div>
                 <Row>
                     <Col>
-                        <h3>Leagues</h3>
+                        <h3 className="display-inline">Leagues</h3><Link to="/temp" ><FaPlus></FaPlus></Link>
                     </Col>
                     <Col>
                         <h3>Teams</h3>
@@ -32,13 +35,13 @@ class Home extends React.Component{
                 </Row>
                 <Row>
                     <Col>
-                        <AnimatedList items={leagues}/>
+                        <AnimatedList items={leagues} right={false}/>
                     </Col>
                     <Col>
-                        <AnimatedList items={leagues}/>
+                        <AnimatedList items={leagues} right={false}/>
                     </Col>
                 </Row>
-                
+
             </Container>
         )
     }
